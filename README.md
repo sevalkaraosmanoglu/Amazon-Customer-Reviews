@@ -12,6 +12,7 @@ Create a binary classification target: problem vs non-problem
 Train and compare multiple ML models
 Improve performance using class balancing techniques
 Apply advanced NLP model (DistilBERT fine-tuning)
+
 📊 Dataset
 
 The dataset contains Amazon product reviews with fields such as:
@@ -37,6 +38,7 @@ Removing special characters
 Stopword removal (Scikit-learn English stopwords)
 Handling missing values
 df["text"] = df["review_headline"].fillna("") + " " + df["review_body"].fillna("")
+
 📈 Exploratory Data Analysis (EDA)
 Key findings:
 Dataset is imbalanced
@@ -46,6 +48,7 @@ Most frequent words in problem reviews:
 product-related: game, sound, battery, quality
 negative sentiment: bad, broken, worst, return
 Verified purchases showed slightly lower problem rates compared to non-verified ones.
+
 🤖 Machine Learning Models
 
 The following models were trained and compared:
@@ -64,6 +67,7 @@ Lower recall for minority class
 ✔ XGBoost
 Competitive results
 Similar performance to Random Forest
+
 🏆 Best Model Comparison
 Model	Accuracy	F1 (Problem Class)
 Logistic Regression	~0.87	0.76
@@ -101,16 +105,19 @@ Error analysis showed:
 Most errors occur in short or ambiguous reviews
 False negatives are more critical (missed problem reviews)
 Product-related complaints dominate dataset
+
 📌 Key Insights
 Most complaints are related to product quality and functionality
 Delivery and customer service issues are less frequent
 Classical ML models perform surprisingly well on TF-IDF features
 DistilBERT provides better contextual understanding but is computationally expensive
+
 🚀 Future Improvements
 Hyperparameter tuning for ML models
 Larger fine-tuning dataset for DistilBERT
 Aspect-based sentiment analysis (product vs delivery vs support)
 Deployment as API (FastAPI / Flask)
+
 🛠️ Tech Stack
 Python 🐍
 Pandas, NumPy
@@ -119,6 +126,7 @@ XGBoost
 NLTK / Regex
 Transformers (HuggingFace)
 PyTorch
+
 📁 Project Structure
 ├── data/
 ├── notebooks/
